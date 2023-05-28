@@ -1,4 +1,4 @@
 "use strict";
-import Game from "./modules/game.min.js";
+import Game from "./modules/game.js";
 
 new Game( '.container' );

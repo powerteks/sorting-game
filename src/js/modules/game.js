@@ -1,8 +1,8 @@
 
-import Model from './model.min.js';
-import Store from './store.min.js';
-import View from './view.min.js';
-import Controller from "./controller.min.js";
+import Model from './model.js';
+import Store from './store.js';
+import View from './view.js';
+import Controller from "./controller.js";
 
 export default class Game
 {
