@@ -11,6 +11,7 @@ export default class Model
 		store.setData( 'skin', 0 );
 		this.counterFullBottle = 0
 		this.cache = [];
+		this.colors = this.fillColors();
 
 		this.getBoard();
 	}
@@ -34,25 +35,21 @@ export default class Model
 	}
 
 	fillBottles () {
+		this.cacheColors = JSON.parse( JSON.stringify( this.colors ) );
+
 		for ( let bottle = 0; bottle < this.store.qtyFullBottle; bottle++ ) {
 			this.store.board.push([]);
 		}
 	
-		for ( let bottle = 0; bottle < this.store.qtyFullBottle; bottle++ ) {
-			for ( let part = 0; part < this.store.qtyParts; part++ ) {
-				this.fillBottle( bottle );
+		for ( let color = 0; color < this.store.qtyFullBottle; color++ ) {
+			for ( let index = 0; index < this.store.qtyParts; index++ ) {
+				this.fillColor( color );
 			}
 		}
 
 		for ( let bottle = this.store.qtyFullBottle; bottle < ( this.store.qtyEmptylBottle + this.store.qtyFullBottle ); bottle++ ) {
-			this.store.board.push([]);
-
-			for ( let part = 0; part < this.store.qtyParts; part++ ) {
-				this.store.board[ bottle ].push( 0 );
-			}
+			this.store.board.push( new Array( this.store.qtyParts ).fill( 0 ) );
 		}
-
-		this.checkFullness();
 	}
 
 	checkFullness () {
@@ -65,13 +62,13 @@ export default class Model
 		if ( i > 0 ) this.fillBottles();
 	}
 
-	fillBottle ( bottle ) {
-		const random = Math.floor( Math.random() * this.store.qtyFullBottle );
+	fillColor ( bottle ) {
+		const random = Math.floor( Math.random() * this.cacheColors.length );
 
-		if ( this.store.board[ random ].length < this.store.qtyParts ) {
-			this.store.board[ random ].push( bottle + 1 );
-		} else {
-			this.fillBottle ( bottle );
+		this.store.board[ bottle ].push( this.cacheColors[ random ].pop() );
+
+		if ( this.cacheColors[ random ].length === 0 ) {
+			this.cacheColors.splice( random, 1 );
 		}
 	}
 
@@ -200,5 +197,21 @@ export default class Model
 		this.store.board = [];
 		this.store.history = [];
 		this.getBoard( true );
+	}
+
+	fillColors () {
+		const colors = [];
+
+		for ( let color = 0; color < this.store.qtyFullBottle; color++ ) {
+			colors.push([]);
+		}
+	
+		for ( let color = 0; color < this.store.qtyFullBottle; color++ ) {
+			for ( let qty = 0; qty < this.store.qtyParts; qty++ ) {
+				colors[ color ].push( color + 1 );
+			}
+		}
+
+		return colors;
 	}
 }

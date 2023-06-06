@@ -51,12 +51,14 @@ export default class Controller
 
 		if ( event.textContent === 'Undo' ) {
 			if ( this.store.history.length > 0 ) {
+				this.resetСache();
 				this.model.moveBack();
 				this.view.reRender([], true);
 			}
 		}
 
 		if ( event.textContent === 'Restart' ) {
+			this.resetСache();
 			this.model.restart();
 			this.view.reRender( [], true );
 		}
@@ -65,6 +67,14 @@ export default class Controller
 			const nextSkin = ( this.store.skin + 1 < this.store.skins ) ? this.store.skin + 1 : 0;
 			this.changeSkin ( nextSkin );
 			this.view.reRender( [], true );
+		}
+	}
+
+	resetСache () {
+		if ( this.model.cache.length !== 0 ) {
+			this.model.cache = [];
+			this.store.cache = false;
+			this.store.history.pop();
 		}
 	}
 

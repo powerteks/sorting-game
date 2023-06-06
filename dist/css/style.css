@@ -42,14 +42,6 @@ body {
           box-shadow: 0 0 0 2px #ffffff, 0 0 5px 3px #3f89bf;
 }
 
-.container {
-  margin: 0 auto;
-  width: 100%;
-  padding: 15px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -182,7 +174,7 @@ img {
   width: 100%;
   height: 100%;
   content: "";
-  background-image: url("./../img/bottle.png");
+  background-image: url("../img/bottle.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 20;
@@ -201,7 +193,7 @@ img {
           transform: translateX(-50%);
   -webkit-animation: full 0.3s linear forwards;
           animation: full 0.3s linear forwards;
-  background-image: url("./../img/cap.png");
+  background-image: url("../img/cap.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 5;
@@ -253,7 +245,7 @@ img {
   -webkit-transform: translateX(-51%);
       -ms-transform: translateX(-51%);
           transform: translateX(-51%);
-  background-image: url("./../img/cap.png");
+  background-image: url("../img/cap.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 5;
@@ -365,111 +357,111 @@ img {
 }
 
 .part-1 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-1.avif"), url("./../img/glass-1.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-1.avif"), url("../img/glass-1.png"));
 }
 
 .part-2 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-2.avif"), url("./../img/glass-2.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-2.avif"), url("../img/glass-2.png"));
 }
 
 .part-3 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-3.avif"), url("./../img/glass-3.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-3.avif"), url("../img/glass-3.png"));
 }
 
 .part-4 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-4.avif"), url("./../img/glass-4.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-4.avif"), url("../img/glass-4.png"));
 }
 
 .part-5 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-5.avif"), url("./../img/glass-5.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-5.avif"), url("../img/glass-5.png"));
 }
 
 .part-6 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-6.avif"), url("./../img/glass-6.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-6.avif"), url("../img/glass-6.png"));
 }
 
 .part-7 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-7.avif"), url("./../img/glass-7.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-7.avif"), url("../img/glass-7.png"));
 }
 
 .part-8 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-8.avif"), url("./../img/glass-8.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-8.avif"), url("../img/glass-8.png"));
 }
 
 .part-9 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-9.avif"), url("./../img/glass-9.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-9.avif"), url("../img/glass-9.png"));
 }
 
 .part-10 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-10.avif"), url("./../img/glass-10.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-10.avif"), url("../img/glass-10.png"));
 }
 
 .part-11 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-11.avif"), url("./../img/glass-11.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-11.avif"), url("../img/glass-11.png"));
 }
 
 .part-12 span::after {
-  background-image: -webkit-image-set(url("./../img/avif/glass-12.avif"), url("./../img/glass-12.png"));
+  background-image: -webkit-image-set(url("../img/avif/glass-12.avif"), url("../img/glass-12.png"));
 }
 
 .board_skin-1 .part-1 span::after {
-  background-image: url("./../img/ball-1.svg");
+  background-image: url("../img/ball-1.svg");
 }
 
 .board_skin-1 .part-2 span::after {
-  background-image: url("./../img/ball-2.svg");
+  background-image: url("../img/ball-2.svg");
 }
 
 .board_skin-1 .part-3 span::after {
-  background-image: url("./../img/ball-3.svg");
+  background-image: url("../img/ball-3.svg");
 }
 
 .board_skin-1 .part-4 span::after {
-  background-image: url("./../img/ball-4.svg");
+  background-image: url("../img/ball-4.svg");
 }
 
 .board_skin-1 .part-5 span::after {
-  background-image: url("./../img/ball-5.svg");
+  background-image: url("../img/ball-5.svg");
 }
 
 .board_skin-1 .part-6 span::after {
-  background-image: url("./../img/ball-6.svg");
+  background-image: url("../img/ball-6.svg");
 }
 
 .board_skin-1 .part-7 span::after {
-  background-image: url("./../img/ball-7.svg");
+  background-image: url("../img/ball-7.svg");
 }
 
 .board_skin-1 .part-8 span::after {
-  background-image: url("./../img/ball-8.svg");
+  background-image: url("../img/ball-8.svg");
 }
 
 .board_skin-1 .part-9 span::after {
-  background-image: url("./../img/ball-9.svg");
+  background-image: url("../img/ball-9.svg");
 }
 
 .board_skin-1 .part-10 span::after {
-  background-image: url("./../img/ball-10.svg");
+  background-image: url("../img/ball-10.svg");
 }
 
 .board_skin-1 .part-11 span::after {
-  background-image: url("./../img/ball-11.svg");
+  background-image: url("../img/ball-11.svg");
 }
 
 .board_skin-1 .part-12 span::after {
-  background-image: url("./../img/ball-12.svg");
+  background-image: url("../img/ball-12.svg");
 }
 
 .board_skin-1 .bottle__inner::before {
-  background-image: url("./../img/bottle-1.svg");
+  background-image: url("../img/bottle-1.svg");
 }
 
 .board_skin-1 .bottle__full .bottle__inner::after {
-  background-image: url("./../img/cap-1.svg");
+  background-image: url("../img/cap-1.svg");
 }
 
 .board_skin-1 .bottle__inner_full::after {
-  background-image: url("./../img/cap-1.svg");
+  background-image: url("../img/cap-1.svg");
 }
 
 .part__up {
@@ -733,10 +725,4 @@ img {
 .counter {
   font-size: 1.5rem;
   margin: 0;
-}
-
-@media (min-width: 1006px) {
-  .container {
-    width: 1300px;
-  }
 }
